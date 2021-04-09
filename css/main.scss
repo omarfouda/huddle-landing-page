@@ -1,0 +1,241 @@
+$primColor1: hsl(322, 100%, 66%);
+$primColor2: hsl(321, 100%, 78%);
+$primColor3: hsl(0, 100%, 63%);
+$secColor1: hsl(192, 100%, 9%);
+$secColor2: hsl(207, 100%, 98%);
+
+$fontFam1: "Poppins", sans-serif;
+$fontFam2: "Open Sans", sans-serif;
+
+.main-button {
+  color: $primColor2;
+  border: 1px solid $primColor2;
+  background-color: $primColor1;
+  padding: 3px 35px;
+  text-align: center;
+  width: fit-content;
+  border-radius: 35px;
+}
+
+.heading {
+  text-align: center;
+  font-family: $fontFam1;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+/* Start The Nav Section */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  @media (max-width: 769px) {
+    padding: 20px;
+  }
+  img {
+    width: 200px;
+    @media (max-width: 769px) {
+      width: 100px;
+    }
+  }
+  button {
+    @extend .main-button;
+    background-color: #fff;
+    @media (max-width: 769px) {
+      padding: 3px 10px;
+      font-size: 12px;
+    }
+  }
+}
+/* End The Nav Section */
+
+/* Start The Intro Section */
+.intro {
+  margin-top: 150px;
+  margin-bottom: 75px;
+  h3 {
+    @extend .heading;
+    margin-bottom: 0;
+  }
+  p {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    @media (max-width: 769px) {
+      font-size: 14px;
+    }
+  }
+  button {
+    @extend .main-button;
+    color: #fff;
+    padding: 7px 35px;
+  }
+}
+/* End The Intro Section */
+
+/* Start The Statistics Section */
+.stats {
+  margin-top: 100px;
+  margin-bottom: 200px;
+  .stat {
+    margin: 50px auto;
+    width: fit-content;
+    p {
+      font-size: 80px;
+      font-weight: bold;
+      margin-bottom: -18px;
+    }
+    span {
+      opacity: 0.4;
+      margin-left: 30px;
+    }
+  }
+}
+/* End The Statistics Section */
+
+/* Start The Together Section */
+.together,
+.flowing,
+.your-users {
+  .order-unset{
+    @media (min-width:769px) {
+      order: unset !important;
+    }
+  }
+  .text {
+    h3 {
+      @extend .heading;
+      text-align: unset;
+      font-size: 40px;
+      margin-bottom: 26px;
+      @media (max-width:769px) {
+        text-align: center;
+        font-size: 22px;
+        margin-top: 80px;
+        margin-bottom: 15px;
+      }
+    }
+    p{
+      @media (max-width:769px) {
+        text-align: center;
+      }
+    }
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.flowing {
+  margin-top: 200px;
+  margin-bottom: 200px;
+  /* Need @media */
+}
+/* End The Together Section */
+
+/* Start The Community Section */
+.community {
+  margin-top: 200px;
+  margin-bottom: 200px;
+  h3 {
+    @extend .heading;
+    margin-bottom: 25px;
+  }
+  button {
+    @extend .main-button;
+    color: #fff;
+    padding: 10px 50px;
+  }
+}
+/* End The Community Section */
+
+.footer-image {
+  overflow: hidden;
+  position: relative;
+  bottom: -1px;
+  img{
+    width: 100%;
+  }
+}
+
+/* Start The Footer Section */
+footer:first-of-type {
+  background-color: $secColor1;
+  color: #fff;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @media (max-width:769px) {
+    padding-bottom: 0;
+  }
+  .logo {
+    margin-bottom: 25px;
+  }
+  .social-media {
+    margin-top: 50px;
+    li {
+      display: inline-block;
+      margin-right: 12px;
+      i {
+        font-size: 30px;
+      }
+    }
+  }
+  h3 {
+    @extend .heading;
+    text-align: unset;
+  }
+  h3 + p {
+    width: 75%; /* Need @media */
+    margin-bottom: 30px;
+  }
+  form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    @media (max-width:769px) {
+      justify-content: flex-end;
+    }
+    input[type="text"] {
+      border-radius: 5px;
+      padding: 0 7px;
+      outline: none;
+      margin-bottom: 10px;
+      @media (min-width:769px) {
+        margin-right: 20px;
+      }
+    }
+    input[type="submit"] {
+      @extend .main-button;
+      border-radius: 5px;
+      color: #fff;
+      border: 0;
+      padding: 6px 27px;
+      margin-bottom: 10px;
+    }
+  }
+}
+/* End The Footer Section */
+footer:last-of-type {
+  background-color: $secColor1;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  .attribution {
+    margin-bottom: 0;
+    font-size: unset;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+
+
+.image-mookup{
+  display: flex ;
+  justify-content: center;
+  overflow: hidden;
+  img{
+    width: 100%;
+  }
+}
